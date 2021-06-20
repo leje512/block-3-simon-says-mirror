@@ -43,8 +43,8 @@ let soundModel = absolutePath + "data/";
 //game variables
 let start = false;
 let expectedPose; //is changed if the audio is a accepted command
-let pointsP1 = 2;
-let pointsP2 = 2;
+let pointsP1 = 4;
+let pointsP2 = 4;
 let isSimonSays = false; //checks if the command is simon says and the next command has to be done or not
 let waitingForAudio = true; //checks if the program is waiting for audio or posenet
 let expectedPlayer = 1;
@@ -177,11 +177,11 @@ function setup() {
     timeStamp = data.timeStamp;
     seconds = data.seconds;
 
-    if (expectedPose == "hands-up") {
+    if (expectedPose.includes('up')) {
       handsUp();
-    } else if (expectedPose == "right-hand-up") {
+    } else if (expectedPose.includes('right')) {
       rightHandUp();
-    } else if (expectedPose == "left-hand-up") {
+    } else if (expectedPose.includes('left')) {
       leftHandUp();
     } else {
       handsDown();
@@ -261,8 +261,8 @@ function startGame() {
   predictedAudio = "loading...";
 
   expectedPose = "hands-down"; //is changed if the audio is a accepted command
-  pointsP1 = 3;
-  pointsP2 = 3;
+  pointsP1 = 4;
+  pointsP2 = 4;
   isSimonSays = false;
   waitingForAudio = true;
   playerOne = true;
@@ -991,8 +991,8 @@ function initSerial() {
 }
 
 function leftHandUp() {
-  let left = 0;
-  let right = 0;
+  let left = 50;
+  let right = 60;
   let led = 0;
   if (isSimonSays) {
     led = 1;
@@ -1001,8 +1001,8 @@ function leftHandUp() {
 }
 
 function rightHandUp() {
-  let right = 60;
-  let left = 50;
+  let right = 0;
+  let left = 0;
   let led = 0;
   if (isSimonSays) {
     led = 1;
