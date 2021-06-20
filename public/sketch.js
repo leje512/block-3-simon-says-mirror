@@ -1,5 +1,3 @@
-import { PORT } from "./server.js";
-
 //roomId
 var room = "default";
 
