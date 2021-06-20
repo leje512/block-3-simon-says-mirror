@@ -1,9 +1,11 @@
 var express = require('express');
+var normalizePort = require('normalize-port');
 
 var app = express();
 //var server = app.listen(3000);
-const PORT = process.env.PORT || 3000;
-var server = app.listen(PORT);
+const PORT = normalizePort(process.env.PORT || '3000');
+app.set('PORT', PORT);
+var server = app.listen(app.get('PORT'));
 
 app.use(express.static('public'));
 

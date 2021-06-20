@@ -1,3 +1,5 @@
+import { PORT } from "./server.js";
+
 //roomId
 var room = "default";
 
@@ -145,7 +147,7 @@ function setup() {
   bg = lightblue;
 
   //connect to server
-  socket = io.connect(`0.0.0.0:${process.env.PORT}`);
+  socket = io.connect();
 
   socket.on("connect", function () {
     socket.emit("room", room);
