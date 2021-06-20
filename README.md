@@ -8,8 +8,8 @@ Call index.html and enjoy!
 clone project
 
 ```bash
-git clone https://r-n-d.informatik.hs-augsburg.de:8080/jelllea/block-3-simon-says.git
-cd block-3-simon-says
+git clone https://r-n-d.informatik.hs-augsburg.de:8080/jelllea/simon-says-submission.git
+cd simon-says-submission
 ```
 
 change folder
@@ -37,20 +37,17 @@ git push
 install packages
 
 ```bash
-cd online-multiplayer
 npm install
 ```
 
 start server for development purposes
 
 ```bash
-cd online-multiplayer
 npm run serve
 ```
 
 start server for production
 
 ```bash
-cd online-multiplayer
 node server.js
 ```
