@@ -1,0 +1,11 @@
+Simon Says is a game for two players. 
+One of the players gives a command, the other has to follow it, but only when the player 'Simon Says' said.
+First, you have to join into the same room. After you are in the same room, you can press the start button. 
+Player one has to choose one of the four commands 'left hand up', 'right hand up', 'both hands up' or 'both hands down'.
+To choose one of the commands, the player has to click on the button above the arm of the little robot in the left-down corner of the canvas. 
+If the player wants to say 'Simon Says' then he should press on the speech bubble. 
+Now the player sends this to player two. On the Table of player two is a robot that moves its arms if player one sends the command. 
+When player one chose 'Simon Says', a LED in the robot's head should light up. That means player two has to follow the command and put the arms the same way as the robot. 
+If the LED stays off, player two has to let his arms down.
+If player two did everything right, nothing happens, now he can choose a command for player one, but if there was something wrong, he loses a life.
+This game lasts until one of the players has no life anymore.

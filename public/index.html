@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/ml5.min.js"></script>
+    <script src="libraries/webserial.js"></script> 
+    <script src="sketch.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+  </head>
+  <body>
+    <h1>SIMON SAYS</h1>
+    <form id="room">
+      <label for="roomId">Room ID:</label>
+      <input type="text" id="roomId" value="default">
+      <button type="button" onclick="joinRoom()">Join</button>
+    </form>
+    <button class="button" id="start-button" onclick="socket.emit('startGame', room);classify();startGame();
+      ">Start</button>
+    <p id="playerNumber">You are player 1</p>
+    
+    <div id="canvas"></div>
+    <div id="gui"></div>
+  </body>
+</html>
