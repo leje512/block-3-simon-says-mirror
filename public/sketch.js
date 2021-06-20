@@ -145,7 +145,7 @@ function setup() {
   bg = lightblue;
 
   //connect to server
-  socket = io.connect("http://localhost:3000");
+  socket = io.connect(`0.0.0.0:${process.env.PORT}`);
 
   socket.on("connect", function () {
     socket.emit("room", room);
