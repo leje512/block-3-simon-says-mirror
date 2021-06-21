@@ -31,17 +31,5 @@
     
     <div id="canvas"></div>
     <div id="gui"></div>
-
-    <script>
-
-      //restoring the webgl context
-      let canvas = document.getElementById("canvas");
-      canvas.addEventListener("webglcontextlost", function(event) {
-          event.preventDefault();
-      }, false);
-
-      canvas.addEventListener(
-        "webglcontextrestored", setupWebGLStateAndResources, false);
-    </script>
   </body>
 </html>
