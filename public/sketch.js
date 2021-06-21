@@ -246,6 +246,15 @@ function setup() {
   });
 }
 
+//restoring the webgl context
+canvas = document.getElementById("myCanvas");
+canvas.addEventListener("webglcontextlost", function(event) {
+    event.preventDefault();
+}, false);
+
+canvas.addEventListener(
+  "webglcontextrestored", setupWebGLStateAndResources, false);
+
 function startGame() {
   console.log("startGame");
   start = true;
