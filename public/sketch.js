@@ -89,6 +89,17 @@ function preload() {
   imgSpeechbubblePink = loadImage("images/speechbubble rosa.png");
 }
 
+const sum = (accumulator, currentValue) => accumulator + currentValue;
+const indexOfMax = function (array) {
+  let maxNumber = Math.max(...array); //spreadoperator
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == maxNumber) {
+      return i;
+    }
+  }
+  return undefined;
+};
+
 function setup() {
   // canvas
   const canvas = createCanvas(640, 480);
@@ -245,15 +256,6 @@ function setup() {
     }
   });
 }
-
-//restoring the webgl context
-canvas = document.getElementById("myCanvas");
-canvas.addEventListener("webglcontextlost", function(event) {
-    event.preventDefault();
-}, false);
-
-canvas.addEventListener(
-  "webglcontextrestored", setupWebGLStateAndResources, false);
 
 function startGame() {
   console.log("startGame");
@@ -634,17 +636,6 @@ function countdown() {
   }
   socket.emit("countdown", room, seconds);
 }
-
-const sum = (accumulator, currentValue) => accumulator + currentValue;
-const indexOfMax = function (array) {
-  let maxNumber = Math.max(...array); //spreadoperator
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] == maxNumber) {
-      return i;
-    }
-  }
-  return undefined;
-};
 
 //POSENET
 function getPoseNet() {
