@@ -34,3 +34,18 @@ form {
 #start-button {
     display: inline-block;
 }
+#instructions {
+    display: inline;
+    text-decoration: none;
+}
+#playerNumber {
+    display: inline;
+}
+#rules {
+    display: inline;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}

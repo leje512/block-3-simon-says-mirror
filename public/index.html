@@ -23,7 +23,11 @@
     </form>
     <button class="button" id="start-button" onclick="socket.emit('startGame', room);classify();startGame();
       ">Start</button>
-    <p id="playerNumber">You are player 1</p>
+    <div>
+      <a href="instructions.html"><button class="button" id="instructions" >Instructions</button></a>
+      <p id="playerNumber">You are player 1</p>
+      <a href="rules.html"><button class="button" id="rules" >Rules</button></a>
+    </div>
     
     <div id="canvas"></div>
     <div id="gui"></div>
