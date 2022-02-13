@@ -1,7 +1,7 @@
 # Block 3 - Simon says
 
-Clone Project and install it on a server.
-Call index.html and enjoy!
+A web application of the game "Simon Says" using a Arduino Robot as a two-player game. Live version from 2021: https://ancient-oasis-54418.herokuapp.com/ 
+Clone Project and install it on a server. Call index.html and enjoy!
 
 ## Git Commands
 
